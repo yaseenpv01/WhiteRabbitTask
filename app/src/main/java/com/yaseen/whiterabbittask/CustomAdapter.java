@@ -11,15 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.yaseen.whiterabbittask.Room.Employee;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
     Context context;
-    List<ModelClass> arrayList;
+    ArrayList<Employee> arrayList;
 
-    public CustomAdapter(MainActivity context, List<ModelClass> arrayList) {
+    public CustomAdapter(MainActivity context, ArrayList<Employee> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -37,10 +39,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
 
-        ModelClass modelClass = arrayList.get(position);
+        Employee modelClass = arrayList.get(position);
 
         holder.name.setText(modelClass.getName());
-        holder.companyName.setText(modelClass.getCompanyName());
+        holder.companyName.setText(modelClass.getEmail());
 
         Glide.with(context)
                 .load(modelClass.getImage())

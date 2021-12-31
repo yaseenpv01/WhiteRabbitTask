@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface EmployeeDao {
 
-    @Query("SELECT * FROM task")
+    @Query("SELECT * FROM employee")
     List<Employee> getAll();
 
     @Insert

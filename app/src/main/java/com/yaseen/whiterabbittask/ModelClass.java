@@ -13,7 +13,7 @@ public class ModelClass {
     String website;
     String companyDetails;
 
-    public ModelClass(int id, String image, String name, String userName, String companyName, double phone, String email, String address, String website, String companyDetails) {
+    public ModelClass(int id, String image, String name, String userName, String companyName) {
         this.id = id;
         this.image = image;
         this.name = name;
